@@ -1,0 +1,212 @@
+:root {
+    --name: "Morgan Oakley";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "aside header header header header"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main";
+}
+
+/* all sidebar styling */
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: salmon;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "icon clickable-text";
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.dashboard > .icon {
+    grid-area: icon;
+    background-image: url(view-dashboard.svg);
+    background-size: 100% 100%;
+}
+
+.home > .icon {
+    grid-area: icon;
+    background-image: url(home-variant.svg);
+    background-size: 100% 100%;
+}
+
+.profile > .icon {
+    grid-area: icon;
+    background-image: url(account-cowboy-hat.svg);
+    background-size: 100% 100%;
+}
+
+.messages > .icon {
+    grid-area: icon;
+    background-image: url(message-reply.svg);
+    background-size: 100% 100%;
+}
+
+.history > .icon {
+    grid-area: icon;
+    background-image: url(history.svg);
+    background-size: 100% 100%;
+}
+
+.tasks > .icon {
+    grid-area: icon;
+    background-image: url(format-list-checks.svg);
+    background-size: 100% 100%;
+}
+
+.communities > .icon {
+    grid-area: icon;
+    background-image: url(account-group.svg);
+    background-size: 100% 100%;
+}
+
+.clickable-text {
+    grid-area: clickable-text;
+}
+
+.aside-top-buttons > div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "icon clickable-text";
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.aside-bottom > div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "icon clickable-text";
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.settings > .icon {
+    grid-area: icon;
+    background-image: url(cog-outline.svg);
+    background-size: 100% 100%;
+}
+
+.support > .icon {
+    grid-area: icon;
+    background-image: url(help-box.svg);
+    background-size: 100% 100%;
+}
+
+.privacy > .icon {
+    grid-area: icon;
+    background-image: url(shield-check.svg);
+    background-size: 100% 100%;
+}
+/* end sidebar styling */
+
+header {
+    grid-area: header;
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-top-left {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.header-top-right {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bottom-left {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    height: 20px;
+    width: 20px;
+    background-image: url(magnify.svg);
+    background-size: 100% 100%;
+    margin-right: 10px;
+}
+
+.searchbar {
+    height: 2rem;
+    flex: 1;
+    border-radius: 20px;
+    background-color: silver;
+    padding: 0px 6px;
+    border: none;
+}
+
+#bell {
+    height: 20px;
+    width: 20px;
+    background-image: url(bell-ring.svg);
+    background-size: 100% 100%;
+}
+
+.avatar {
+    height: 20px;
+    width: 20px;
+    background-image: url(penguin.svg);
+    background-size: 100% 100%;
+    padding: 0 2rem;
+}
+
+.avatar:nth-child(1) {
+    height: 3rem;
+    width: 3rem;
+}
+.name::after {
+    content: var(--name);
+}
+
+button {
+    margin: 20px;
+    padding: 6px 24px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* End header styling */
+
+main {
+    grid-area: main;
+    background-color: steelblue;
+}
