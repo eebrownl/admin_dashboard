@@ -22,7 +22,7 @@
     "aside main main main main";
 }
 
-/* all sidebar styling */
+/* Begin sidebar styling */
 aside {
     grid-area: aside;
     display: grid;
@@ -123,6 +123,8 @@ aside {
 }
 /* end sidebar styling */
 
+/* Start header styling */
+
 header {
     grid-area: header;
     background-color: seagreen;
@@ -147,7 +149,7 @@ header {
 .header-bottom-left {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -206,7 +208,36 @@ button {
 
 /* End header styling */
 
+/* Begin main section styling */
+
 main {
     grid-area: main;
     background-color: steelblue;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "main-left main-right";
+
+}
+
+.main-left {
+    grid-area: main-left;
+    background-color: silver;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.main-right {
+    grid-area: main-right;
+}
+
+.left-box {
+    background-color: whitesmoke;
+    padding: 6px;
+}
+
+.left-box > p {
+    font-size: .8rem;
 }
