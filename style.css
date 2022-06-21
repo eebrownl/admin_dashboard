@@ -326,7 +326,6 @@ h4 {
 .label {
     display: flex;
     align-items: flex-start;
-    text-decoration: underline;
     justify-content: center;
 }
 
