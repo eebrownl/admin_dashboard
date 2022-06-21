@@ -27,7 +27,8 @@ aside {
     grid-area: aside;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: salmon;
+    background-color: #059669;
+    color: whitesmoke;
 }
 
 .dashboard {
@@ -86,6 +87,11 @@ aside {
     grid-area: clickable-text;
 }
 
+.clickable-text:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
 .aside-top-buttons > div {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -127,7 +133,7 @@ aside {
 
 header {
     grid-area: header;
-    background-color: seagreen;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -204,6 +210,13 @@ button {
     padding: 6px 24px;
     border-radius: 20px;
     border: none;
+    background-color: #059669;
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color:#10b981;
+    cursor: pointer;
 }
 
 /* End header styling */
@@ -212,7 +225,6 @@ button {
 
 main {
     grid-area: main;
-    background-color: steelblue;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "main-left main-right";
@@ -231,6 +243,10 @@ main {
 
 .main-right {
     grid-area: main-right;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+    background-color: silver;
 }
 
 .left-box {
@@ -243,6 +259,10 @@ main {
     font-size: .8rem;
 }
 
+h4 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 .star {
     height: 16px;
     width: 16px;
@@ -269,4 +289,49 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.star:hover, .watch:hover, .share:hover {
+    cursor: pointer;
+}
+
+.main-right-top {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    background-color: silver;
+}
+
+.main-right-bottom {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    background-color: silver;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.label {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+.ann , .trend {
+    padding-top: 6px;
+    padding-left: 6px;
+    border-bottom-style: dotted;
 }
