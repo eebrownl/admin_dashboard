@@ -224,9 +224,9 @@ main {
     background-color: silver;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
 }
 
 .main-right {
@@ -235,9 +235,38 @@ main {
 
 .left-box {
     background-color: whitesmoke;
-    padding: 6px;
+    padding: 0 6px;
+    border-radius: 8px;
 }
 
-.left-box > p {
+.left-box > span {
     font-size: .8rem;
+}
+
+.star {
+    height: 16px;
+    width: 16px;
+    background-image: url(star-plus-outline.svg);
+    background-size: 100% 100%;
+}
+
+.watch {
+    height: 16px;
+    width: 16px;
+    background-image: url(eye-plus-outline.svg);
+    background-size: 100% 100%;
+    margin: 0 10px;
+}
+.share {
+    height: 16px;
+    width: 16px;
+    background-image: url(share-variant-outline.svg);
+    background-size: 100% 100%;
+}
+
+.box-buttons {
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
